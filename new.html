@@ -135,13 +135,83 @@
       cursor: pointer; text-decoration: none; transition: var(--transition);
     }
     .cv-btn:hover { transform: translateY(-2px); box-shadow: var(--glow-cyan); filter: brightness(1.1); }
+  
+  /* MOBILE NAV TOGGLE */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  width: 36px; height: 36px;
+  align-items: center; justify-content: center;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: var(--transition);
+}
+.nav-hamburger span {
+  display: block;
+  width: 18px; height: 1.5px;
+  background: var(--muted);
+  border-radius: 99px;
+  transition: var(--transition);
+}
+.nav-hamburger:hover { border-color: var(--accent); }
+.nav-hamburger:hover span { background: var(--accent); }
+
+/* Hamburger → X animation */
+.nav-hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.nav-hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.nav-hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+/* MOBILE DRAWER */
+.mobile-nav-drawer {
+  position: fixed;
+  top: 65px; left: 0; right: 0;
+  z-index: 490;
+  background: rgba(5,5,9,0.97);
+  backdrop-filter: blur(24px);
+  border-bottom: 1px solid var(--border);
+  flex-direction: column;
+  padding: 1.5rem 5vw 2rem;
+  gap: 0.25rem;
+  display: none;
+}
+.mobile-nav-drawer.open { display: flex; }
+body.light .mobile-nav-drawer { background: rgba(248,250,252,0.97); }
+
+.mobile-nav-drawer a {
+  padding: 0.9rem 0;
+  color: var(--muted);
+  text-decoration: none;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--border);
+  transition: color 0.25s;
+}
+.mobile-nav-drawer a:last-child { border-bottom: none; }
+.mobile-nav-drawer a:hover { color: var(--accent); }
+
+/* Show hamburger only on mobile */
+@media (max-width: 900px) {
+  .nav-hamburger { display: flex; }
+}
 
     /* HERO */
-    #hero {
-      min-height: 100vh; display: flex; flex-direction: column;
-      justify-content: center; padding: 8rem 5vw 4rem;
-      position: relative; z-index: 1;
-    }
+    /* HERO SECTION - flex layout */
+#hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8rem 5vw 4rem;
+  position: relative;
+  z-index: 1;
+  gap: 4rem;
+}
     .hero-eyebrow {
       font-family: 'JetBrains Mono', monospace; font-size: 0.72rem;
       color: var(--accent); letter-spacing: 4px; text-transform: uppercase;
@@ -203,18 +273,6 @@
       0%,100% { transform: translateX(-50%) translateY(0); }
       50% { transform: translateX(-50%) translateY(8px); }
     }
-/* HERO SECTION - flex layout */
-#hero {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  padding: 8rem 5vw 4rem;
-  position: relative;
-  z-index: 1;
-  gap: 4rem;
-}
 
 /* HERO PHOTO PANEL */
 .hero-photo-panel {
@@ -306,6 +364,10 @@
 
 /* RESPONSIVE - mobile stacks vertically */
 @media (max-width: 900px) {
+   .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .nav-links { display: none; }
+  .form-row { grid-template-columns: 1fr; }
+
   #hero {
     flex-direction: column;
     align-items: flex-start;
@@ -349,7 +411,7 @@
 
     /* ABOUT */
     #about { background: var(--surface); }
-    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+    .about-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; align-items: center; }
     .about-text p { color: var(--muted); line-height: 1.85; font-weight: 300; margin-bottom: 1.2rem; font-size: 0.97rem; }
     .about-text p strong { color: var(--text); font-weight: 500; }
     .about-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
@@ -460,7 +522,7 @@
 
     /* CONTACT */
     #contact { background: var(--surface); }
-    .contact-grid { display: grid; grid-template-rows: 1fr 1fr; gap: 5rem; align-items: start; }
+   .contact-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 5rem; align-items: start; }
     .contact-info-text { color: var(--muted); line-height: 1.85; font-weight: 300; margin-bottom: 2rem; font-size: 0.97rem; }
     .contact-links { display: flex; flex-direction: column; gap: 0.75rem; }
     .contact-link {
@@ -469,7 +531,6 @@
       border: 1px solid var(--border); border-radius: var(--radius);
       color: var(--text); text-decoration: none; font-size: 0.85rem;
       transition: var(--transition);
-      width: 30rem;
     }
     .contact-link i { color: var(--accent); width: 16px; text-align: center; }
     .contact-link:hover { border-color: var(--accent); transform: translateX(4px); box-shadow: var(--glow-cyan); }
@@ -521,6 +582,7 @@
 
     /* RESPONSIVE */
     @media (max-width: 900px) {
+      body { overflow-x: hidden; }
       .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
       .nav-links { display: none; }
       .form-row { grid-template-columns: 1fr; }
@@ -556,7 +618,17 @@
     <a href="#" class="cv-btn" id="cvBtn">
       <i class="fas fa-download"></i> Download CV
     </a>
+     <button class="nav-hamburger" id="hamburgerBtn" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
   </div>
+</nav>
+  <nav class="mobile-nav-drawer" id="mobileDrawer">
+  <a href="#about">01 · About</a>
+  <a href="#skills">02 · Skills</a>
+  <a href="#projects">03 · Projects</a>
+  <a href="#education">04 · Education</a>
+  <a href="#contact">05 · Contact</a>
 </nav>
 
 <!-- ═══ HERO ═══ -->
@@ -597,6 +669,7 @@
     <span>Scroll</span>
   </div>
 </section>
+
 
 <!-- ═══ ABOUT ═══ -->
 <section id="about">
@@ -761,6 +834,7 @@
   </div>
 </section>
 
+
 <!-- ═══ CONTACT ═══ -->
 <section id="contact">
   <div data-aos="fade-up">
@@ -822,6 +896,7 @@
   <p>Built with <span>♥</span> · HTML · CSS · JS</p>
 </footer>
 
+
 <!-- ══════════════ SCRIPTS ══════════════ -->
 <!-- Particles.js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
@@ -882,6 +957,7 @@ new Swiper('.projects-swiper', {
   }
 });
 
+
 // ── CUSTOM CURSOR ──
 const cursor     = document.getElementById('cursor');
 const cursorRing = document.getElementById('cursorRing');
@@ -939,6 +1015,24 @@ document.getElementById('cvBtn').addEventListener('click', e => {
   const a    = Object.assign(document.createElement('a'), { href: url, download: 'Primus_CV.txt' });
   a.click(); URL.revokeObjectURL(url);
 });
+  
+  // ── MOBILE NAV TOGGLE ──
+const hamburgerBtn = document.getElementById('hamburgerBtn');
+const mobileDrawer = document.getElementById('mobileDrawer');
+
+hamburgerBtn.addEventListener('click', () => {
+  hamburgerBtn.classList.toggle('open');
+  mobileDrawer.classList.toggle('open');
+});
+
+
+// Close drawer when any link is clicked
+document.querySelectorAll('#mobileDrawer a').forEach(link => {
+  link.addEventListener('click', () => {
+    hamburgerBtn.classList.remove('open');
+    mobileDrawer.classList.remove('open');
+  });
+});
 
 // ── CONTACT FORM ──
 document.getElementById('formSubmitBtn').addEventListener('click', () => {
@@ -970,4 +1064,4 @@ document.getElementById('formSubmitBtn').addEventListener('click', () => {
 </script>
 
 </body>
-</html
+</html>
