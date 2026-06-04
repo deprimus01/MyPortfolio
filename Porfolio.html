@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Primus Portfolio</title>
+  <title>Primus | CS Portfolio</title>
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet"/>
@@ -32,7 +32,7 @@
 
 <!-- NAV -->
 <nav>
-  <div class="nav-logo">PRIMUS</div>
+  <div class="nav-logo">DEPRIMUS</div>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#skills">Skills</a></li>
@@ -44,22 +44,31 @@
     <a href="#" class="cv-btn" id="cvBtn">
       <i class="fas fa-download"></i> Download CV
     </a>
+     <button class="nav-hamburger" id="hamburgerBtn" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
   </div>
+</nav>
+  <nav class="mobile-nav-drawer" id="mobileDrawer">
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
 </nav>
 
 <!-- ═══ HERO ═══ -->
 <section id="hero">
   <div style="position:relative;z-index:1">
-    <p class="hero-eyebrow" data-aos="fade-right" data-aos-delay="100">Computer Science Student</p>
+    <p class="hero-eyebrow" data-aos="fade-right" data-aos-delay="100">Dev</p>
     <h1 class="hero-title" data-aos="fade-up" data-aos-delay="200">
-      <span class="grad">PRIMUS</span><br>
+      <span class="grad">DEPRIMUS</span><br>
       <span class="outline">PORTFOLIO</span>
     </h1>
     <div class="hero-typed-wrap" data-aos="fade-up" data-aos-delay="350">
       <span id="typed-el"></span>
     </div>
     <p class="hero-desc" data-aos="fade-up" data-aos-delay="450">
-      Building web experiences, writing clean code, and solving real-world problems with Java, Python, HTML/CSS/JS — and beyond.
+      Building web experiences, writing clean code, and solving real-world problems with Java, Python, HTML/CSS/JS and beyond.
     </p>
     <div class="hero-btns" data-aos="fade-up" data-aos-delay="550">
       <a href="#projects" class="btn-glow">View Projects</a>
@@ -70,12 +79,26 @@
     <i class="fas fa-chevron-down"></i>
     <span>Scroll</span>
   </div>
+<!-- PHOTO PANEL -->
+  <div class="hero-photo-panel" data-aos="fade-left" data-aos-delay="300">
+    <div class="hero-photo-frame">
+      <img src="deprimus.png" alt="My Image">
+</div>
+    <div class="hero-photo-badge">
+      <span class="dot"></span> Open to opportunities
+    </div>
+  </div>
+
+  <div class="hero-scroll">
+    <i class="fas fa-chevron-down"></i>
+    <span>Scroll</span>
+  </div>
 </section>
 
 <!-- ═══ ABOUT ═══ -->
 <section id="about">
   <div data-aos="fade-up">
-    <div class="section-tag">01 · About</div>
+    <div class="section-tag">About</div>
     <h2 class="section-title">Who I <span>Am</span></h2>
   </div>
   <div class="about-grid">
@@ -90,7 +113,7 @@
         <div class="stat-label">CS Courses</div>
       </div>
       <div class="stat-card">
-        <div class="stat-num">10+</div>
+        <div class="stat-num">5+</div>
         <div class="stat-label">Projects Built</div>
       </div>
       <div class="stat-card">
@@ -108,7 +131,7 @@
 <!-- ═══ SKILLS ═══ -->
 <section id="skills">
   <div data-aos="fade-up">
-    <div class="section-tag">02 · Skills</div>
+    <div class="section-tag">Skills</div>
     <h2 class="section-title">Tech <span>Stack</span></h2>
   </div>
   <div class="skills-grid">
@@ -155,7 +178,7 @@
 <!-- ═══ PROJECTS ═══ -->
 <section id="projects">
   <div data-aos="fade-up">
-    <div class="section-tag">03 · Projects</div>
+    <div class="section-tag">Projects</div>
     <h2 class="section-title">My <span>Work</span></h2>
   </div>
   <div class="swiper projects-swiper" data-aos="fade-up" data-aos-delay="100">
@@ -163,7 +186,7 @@
 
       <div class="swiper-slide">
         <div class="project-card">
-          <div class="project-num">// PROJECT_01</div>
+          <div class="project-num">PROJECT_01</div>
           <div class="project-title">New Generation Computer</div>
           <div class="project-desc">A full e-commerce website for selling laptops and computer accessories. Features product listings, shopping cart, and a clean user-friendly interface built from the ground up.</div>
           <div class="project-tech">
@@ -177,7 +200,7 @@
 
       <div class="swiper-slide">
         <div class="project-card">
-          <div class="project-num">// PROJECT_02</div>
+          <div class="project-num">PROJECT_02</div>
           <div class="project-title">Java Algorithm Suite</div>
           <div class="project-desc">A collection of Java programs covering core CS concepts: prime numbers, factorials, Fibonacci series, sorting algorithms, grade calculators, and even/odd checkers.</div>
           <div class="project-tech">
@@ -190,7 +213,7 @@
 
       <div class="swiper-slide">
         <div class="project-card">
-          <div class="project-num">// PROJECT_03</div>
+          <div class="project-num">PROJECT_03</div>
           <div class="project-title">SIWES Technical Report</div>
           <div class="project-desc">Comprehensive technical report covering industrial training in web development, networking, IP addressing, and Python scripting. Documents real-world application of CS knowledge.</div>
           <div class="project-tech">
@@ -203,7 +226,7 @@
 
       <div class="swiper-slide">
         <div class="project-card">
-          <div class="project-num">// PROJECT_04</div>
+          <div class="project-num">PROJECT_04</div>
           <div class="project-title">CSC 212 Assignment</div>
           <div class="project-desc">Advanced data structures and algorithms assignment covering complex problem-solving, computational thinking, and implementation of core CS fundamentals.</div>
           <div class="project-tech">
@@ -216,7 +239,7 @@
 
       <div class="swiper-slide">
         <div class="project-card">
-          <div class="project-num">// PROJECT_05</div>
+          <div class="project-num">PROJECT_05</div>
           <div class="project-title">Personal Portfolio</div>
           <div class="project-desc">This very portfolio — designed and developed with HTML, CSS, and JavaScript. Features Particles.js, AOS animations, Swiper carousel, Typed.js, and dark/light mode toggle.</div>
           <div class="project-tech">
@@ -235,62 +258,10 @@
   </div>
 </section>
 
-<!-- ═══ EDUCATION ═══ -->
-<section id="education">
-  <div data-aos="fade-up">
-    <div class="section-tag">04 · Education</div>
-    <h2 class="section-title">Academic <span>Journey</span></h2>
-  </div>
-  <div class="edu-main" data-aos="fade-right" data-aos-delay="100">
-    <div class="edu-icon">🎓</div>
-    <div>
-      <div class="edu-degree">B.Sc. Computer Science</div>
-      <div class="edu-sub">Current Student &nbsp;·&nbsp; Full-time</div>
-    </div>
-  </div>
-  <div class="courses-grid">
-    <div class="course-card" data-aos="fade-up" data-aos-delay="50">
-      <div class="course-dot"></div>
-      <div>
-        <div class="course-name">Intro to Web Development</div>
-        <div class="course-sub">HTML · CSS · JavaScript</div>
-      </div>
-    </div>
-    <div class="course-card" data-aos="fade-up" data-aos-delay="100">
-      <div class="course-dot"></div>
-      <div>
-        <div class="course-name">CSC 202</div>
-        <div class="course-sub">Computer Science Fundamentals</div>
-      </div>
-    </div>
-    <div class="course-card" data-aos="fade-up" data-aos-delay="150">
-      <div class="course-dot"></div>
-      <div>
-        <div class="course-name">CSC 207</div>
-        <div class="course-sub">Java Programming</div>
-      </div>
-    </div>
-    <div class="course-card" data-aos="fade-up" data-aos-delay="200">
-      <div class="course-dot"></div>
-      <div>
-        <div class="course-name">CSC 212</div>
-        <div class="course-sub">Data Structures & Algorithms</div>
-      </div>
-    </div>
-    <div class="course-card" data-aos="fade-up" data-aos-delay="250">
-      <div class="course-dot"></div>
-      <div>
-        <div class="course-name">CSC 214</div>
-        <div class="course-sub">Advanced Programming (Java)</div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ═══ CONTACT ═══ -->
 <section id="contact">
   <div data-aos="fade-up">
-    <div class="section-tag">05 · Contact</div>
+    <div class="section-tag">Contact</div>
     <h2 class="section-title">Get In <span>Touch</span></h2>
   </div>
   <div class="contact-grid">
@@ -298,10 +269,10 @@
       <p class="contact-info-text">I'm open to collaborations, internships, and exciting projects. Feel free to reach out through any of the channels below.</p>
       <div class="contact-links">
         <a href="mailto:primus@email.com" class="contact-link">
-          <i class="fas fa-envelope"></i> primus@email.com
+          <i class="fas fa-envelope"></i> deprimus01@gmail.com
         </a>
         <a href="https://github.com" target="_blank" class="contact-link">
-          <i class="fab fa-github"></i> github.com/primus
+          <i class="fab fa-github"></i> github.com/deprimus01
         </a>
         <a href="https://linkedin.com" target="_blank" class="contact-link">
           <i class="fab fa-linkedin"></i> linkedin.com/in/primus
@@ -339,21 +310,178 @@
 
 <!-- FOOTER -->
 <footer>
-  <p>© 2026 <span>Primus</span>. All rights reserved.</p>
+  <p>© 2026 <span>Derimus</span>. All rights reserved.</p>
   <div class="footer-social">
     <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
     <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
-    <a href="mailto:primus@email.com"><i class="fas fa-envelope"></i></a>
+    <a href="mailto:deprimus01@gmail.com"><i class="fas fa-envelope"></i></a>
   </div>
   <p>Built with <span>♥</span> · HTML · CSS · JS</p>
 </footer>
-<script src="portfolio.js"></script>
+
+<!-- ══════════════ SCRIPTS ══════════════ -->
+<!-- Particles.js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
-<!--AOS -->
+<!-- AOS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-<!--Swiper -->
+<!-- Swiper -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
-<!--Typed.js -->
+<!-- Typed.js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.16/typed.umd.js"></script>
+
+<script>
+// ── AOS INIT ──
+AOS.init({ duration: 700, easing: 'ease-out-cubic', once: true, offset: 60 });
+
+// ── PARTICLES ──
+particlesJS('particles-js', {
+  particles: {
+    number: { value: 55, density: { enable: true, value_area: 900 } },
+    color: { value: ['#6ee7f7', '#a78bfa', '#f472b6'] },
+    shape: { type: 'circle' },
+    opacity: { value: 0.35, random: true, anim: { enable: true, speed: 0.6, opacity_min: 0.05 } },
+    size: { value: 2, random: true },
+    line_linked: { enable: true, distance: 130, color: '#1e1e32', opacity: 0.3, width: 1 },
+    move: { enable: true, speed: 1.2, direction: 'none', random: true, out_mode: 'out' }
+  },
+  interactivity: {
+    detect_on: 'canvas',
+    events: { onhover: { enable: true, mode: 'grab' }, onclick: { enable: true, mode: 'push' } },
+    modes: { grab: { distance: 140, line_linked: { opacity: 0.6 } }, push: { particles_nb: 3 } }
+  },
+  retina_detect: true
+});
+
+// ── TYPED.JS ──
+new Typed('#typed-el', {
+  strings: [
+    'Java Developer',
+    'Web Developer',
+    'Problem Solver',
+    'CS Student',
+    'Python Enthusiast',
+    'Full-Stack Builder'
+  ],
+  typeSpeed: 60, backSpeed: 35, backDelay: 1800,
+  loop: true, showCursor: true, cursorChar: '|'
+});
+
+// ── SWIPER ──
+new Swiper('.projects-swiper', {
+  slidesPerView: 1,
+  spaceBetween: 24,
+  pagination: { el: '.swiper-pagination', clickable: true },
+  navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+  breakpoints: {
+    640: { slidesPerView: 1.4 },
+    900: { slidesPerView: 2.2 },
+    1200: { slidesPerView: 3 }
+  }
+});
+
+// ── CUSTOM CURSOR ──
+const cursor     = document.getElementById('cursor');
+const cursorRing = document.getElementById('cursorRing');
+document.addEventListener('mousemove', e => {
+  cursor.style.left     = e.clientX + 'px';
+  cursor.style.top      = e.clientY + 'px';
+  cursorRing.style.left = e.clientX + 'px';
+  cursorRing.style.top  = e.clientY + 'px';
+});
+document.querySelectorAll('a, button, .skill-tag, .project-card').forEach(el => {
+  el.addEventListener('mouseenter', () => {
+    cursor.style.transform     = 'translate(-50%,-50%) scale(2)';
+    cursorRing.style.transform = 'translate(-50%,-50%) scale(1.5)';
+    cursorRing.style.opacity   = '0.3';
+  });
+  el.addEventListener('mouseleave', () => {
+    cursor.style.transform     = 'translate(-50%,-50%) scale(1)';
+    cursorRing.style.transform = 'translate(-50%,-50%) scale(1)';
+    cursorRing.style.opacity   = '0.55';
+  });
+});
+
+// ── SCROLL PROGRESS BAR ──
+const bar = document.getElementById('progress-bar');
+window.addEventListener('scroll', () => {
+  const scrolled = window.scrollY;
+  const max      = document.body.scrollHeight - window.innerHeight;
+  bar.style.width = (scrolled / max * 100) + '%';
+
+  // Back to top
+  document.getElementById('back-top').classList.toggle('show', scrolled > 400);
+});
+document.getElementById('back-top').addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+// ── DARK / LIGHT MODE ──
+const themeBtn  = document.getElementById('themeBtn');
+const themeIcon = document.getElementById('themeIcon');
+if (localStorage.getItem('theme') === 'light') {
+  document.body.classList.add('light');
+  themeIcon.className = 'fas fa-sun';
+}
+themeBtn.addEventListener('click', () => {
+  document.body.classList.toggle('light');
+  const isLight = document.body.classList.contains('light');
+  themeIcon.className = isLight ? 'fas fa-sun' : 'fas fa-moon';
+  localStorage.setItem('theme', isLight ? 'light' : 'dark');
+});
+
+// ── CV DOWNLOAD ──
+document.getElementById('cvBtn').addEventListener('click', e => {
+  e.preventDefault();
+  const cv = `PRIMUS — CURRICULUM VITAE\n${'='.repeat(40)}\n\nCONTACT\n${'-'.repeat(20)}\nEmail   : primus@email.com\nGitHub  : github.com/primus\nLinkedIn: linkedin.com/in/primus\n\nEDUCATION\n${'-'.repeat(20)}\nB.Sc. Computer Science — Current Student\n\nCourses:\n  • Introduction to Web Development (HTML, CSS, JS)\n  • CSC 202 — Computer Science Fundamentals\n  • CSC 207 — Java Programming\n  • CSC 212 — Data Structures & Algorithms\n  • CSC 214 — Advanced Programming (Java)\n\nSKILLS\n${'-'.repeat(20)}\nLanguages  : Java, Python, JavaScript, HTML5, CSS3, PHP, SQL\nWeb Dev    : Responsive Design, REST APIs, MySQL, Node.js, React\nCS Concepts: Data Structures, Algorithms, OOP, Sorting, Recursion\nTools      : Git, GitHub, VS Code, IntelliJ IDEA, Linux\n\nPROJECTS\n${'-'.repeat(20)}\n1. New Generation Computer — E-commerce site (HTML,CSS,JS,PHP,MySQL)\n2. Java Algorithm Suite    — Algorithms & OOP programs (Java, CSC 207)\n3. SIWES Technical Report  — Web dev, Networking, Python\n4. CSC 212 Assignment      — Data Structures (Java)\n5. Personal Portfolio      — Full portfolio site (HTML,CSS,JS)\n\n${'='.repeat(40)}\nGenerated ${new Date().toLocaleDateString()}\n`;
+  const blob = new Blob([cv], { type: 'text/plain' });
+  const url  = URL.createObjectURL(blob);
+  const a    = Object.assign(document.createElement('a'), { href: url, download: 'Primus_CV.txt' });
+  a.click(); URL.revokeObjectURL(url);
+});
+  
+  // ── MOBILE NAV TOGGLE ──
+const hamburgerBtn = document.getElementById('hamburgerBtn');
+const mobileDrawer = document.getElementById('mobileDrawer');
+
+hamburgerBtn.addEventListener('click', () => {
+  hamburgerBtn.classList.toggle('open');
+  mobileDrawer.classList.toggle('open');
+});
+
+// Close drawer when any link is clicked
+document.querySelectorAll('#mobileDrawer a').forEach(link => {
+  link.addEventListener('click', () => {
+    hamburgerBtn.classList.remove('open');
+    mobileDrawer.classList.remove('open');
+  });
+});
+
+// ── CONTACT FORM ──
+document.getElementById('formSubmitBtn').addEventListener('click', () => {
+  const name    = document.getElementById('fname').value.trim();
+  const email   = document.getElementById('femail').value.trim();
+  const subject = document.getElementById('fsubject').value.trim();
+  const message = document.getElementById('fmessage').value.trim();
+  const status  = document.getElementById('formStatus');
+  const btn     = document.getElementById('formSubmitBtn');
+
+  if (!name || !email || !subject || !message) {
+    status.textContent = '⚠ Please fill in all fields.';
+    status.className   = 'form-status error'; return;
+  }
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    status.textContent = '⚠ Please enter a valid email address.';
+    status.className   = 'form-status error'; return;
+  }
+  btn.innerHTML  = '<i class="fas fa-spinner fa-spin" style="margin-right:0.5rem"></i> Sending...';
+  btn.style.opacity = '0.75';
+  setTimeout(() => {
+    status.textContent = "✓ Message sent! I'll get back to you soon.";
+    status.className   = 'form-status success';
+    btn.innerHTML      = '<i class="fas fa-paper-plane" style="margin-right:0.5rem"></i> Send Message';
+    btn.style.opacity  = '1';
+    ['fname','femail','fsubject','fmessage'].forEach(id => document.getElementById(id).value = '');
+  }, 1400);
+});
+</script>
+
 </body>
-</html>
+</html

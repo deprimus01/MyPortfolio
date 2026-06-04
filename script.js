@@ -46,29 +46,6 @@ new Swiper('.projects-swiper', {
     1200: { slidesPerView: 3 }
   }
 });
-
-// ── CUSTOM CURSOR ──
-const cursor     = document.getElementById('cursor');
-const cursorRing = document.getElementById('cursorRing');
-document.addEventListener('mousemove', e => {
-  cursor.style.left     = e.clientX + 'px';
-  cursor.style.top      = e.clientY + 'px';
-  cursorRing.style.left = e.clientX + 'px';
-  cursorRing.style.top  = e.clientY + 'px';
-});
-document.querySelectorAll('a, button, .skill-tag, .project-card').forEach(el => {
-  el.addEventListener('mouseenter', () => {
-    cursor.style.transform     = 'translate(-50%,-50%) scale(2)';
-    cursorRing.style.transform = 'translate(-50%,-50%) scale(1.5)';
-    cursorRing.style.opacity   = '0.3';
-  });
-  el.addEventListener('mouseleave', () => {
-    cursor.style.transform     = 'translate(-50%,-50%) scale(1)';
-    cursorRing.style.transform = 'translate(-50%,-50%) scale(1)';
-    cursorRing.style.opacity   = '0.55';
-  });
-});
-
 // ── SCROLL PROGRESS BAR ──
 const bar = document.getElementById('progress-bar');
 window.addEventListener('scroll', () => {
@@ -103,6 +80,23 @@ document.getElementById('cvBtn').addEventListener('click', e => {
   const url  = URL.createObjectURL(blob);
   const a    = Object.assign(document.createElement('a'), { href: url, download: 'Primus_CV.txt' });
   a.click(); URL.revokeObjectURL(url);
+});
+  
+  // ── MOBILE NAV TOGGLE ──
+const hamburgerBtn = document.getElementById('hamburgerBtn');
+const mobileDrawer = document.getElementById('mobileDrawer');
+
+hamburgerBtn.addEventListener('click', () => {
+  hamburgerBtn.classList.toggle('open');
+  mobileDrawer.classList.toggle('open');
+});
+
+// Close drawer when any link is clicked
+document.querySelectorAll('#mobileDrawer a').forEach(link => {
+  link.addEventListener('click', () => {
+    hamburgerBtn.classList.remove('open');
+    mobileDrawer.classList.remove('open');
+  });
 });
 
 // ── CONTACT FORM ──
