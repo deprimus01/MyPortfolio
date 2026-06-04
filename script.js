@@ -46,6 +46,7 @@ new Swiper('.projects-swiper', {
     1200: { slidesPerView: 3 }
   }
 });
+
 // ── SCROLL PROGRESS BAR ──
 const bar = document.getElementById('progress-bar');
 window.addEventListener('scroll', () => {

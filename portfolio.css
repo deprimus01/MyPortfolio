@@ -29,16 +29,8 @@
       background: var(--bg); color: var(--text);
       font-family: 'DM Sans', sans-serif;
       overflow-x: hidden; transition: background 0.4s, color 0.4s;
-      cursor: none;
+      cursor: default;
     }
-
-    .cursor-ring {
-      width: 34px; height: 34px; border: 1.5px solid var(--accent);
-      border-radius: 50%; position: fixed; pointer-events: none;
-      z-index: 9998; transform: translate(-50%,-50%);
-      transition: transform 0.16s ease-out; opacity: 0.55;
-    }
-    @media (hover: none) { .cursor, .cursor-ring { display: none; } body { cursor: auto; } }
 
     /* PARTICLES */
     #particles-js { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
