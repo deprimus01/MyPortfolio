@@ -583,9 +583,31 @@ body.light .mobile-nav-drawer { background: rgba(248,250,252,0.97); }
     /* RESPONSIVE */
     @media (max-width: 900px) {
       body { overflow-x: hidden; }
-      .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+      nav { width: 100vw; }
+      .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
       .nav-links { display: none; }
+      .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .contact-link { width: 100%; }
       .form-row { grid-template-columns: 1fr; }
+       #hero { 
+    flex-direction: column; 
+    align-items: flex-start; 
+    gap: 2rem; 
+    padding: 6rem 5vw 3rem; 
+  }
+ 
+section { 
+    padding: 4rem 5vw; 
+    width: 100%; 
+    max-width: 100vw; 
+    overflow-x: hidden; 
+  }
+.mobile-nav-drawer { 
+    width: 100vw; 
+    left: 0; 
+    right: 0; 
+    box-sizing: border-box; 
+  }
     }
   </style>
 </head>
@@ -606,7 +628,7 @@ body.light .mobile-nav-drawer { background: rgba(248,250,252,0.97); }
 
 <!-- NAV -->
 <nav>
-  <div class="nav-logo">PRIMUS</div>
+  <div class="nav-logo">DEPRIMUS</div>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#skills">Skills</a></li>
@@ -624,26 +646,25 @@ body.light .mobile-nav-drawer { background: rgba(248,250,252,0.97); }
   </div>
 </nav>
   <nav class="mobile-nav-drawer" id="mobileDrawer">
-  <a href="#about">01 · About</a>
-  <a href="#skills">02 · Skills</a>
-  <a href="#projects">03 · Projects</a>
-  <a href="#education">04 · Education</a>
-  <a href="#contact">05 · Contact</a>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
 </nav>
 
 <!-- ═══ HERO ═══ -->
 <section id="hero">
   <div style="position:relative;z-index:1">
-    <p class="hero-eyebrow" data-aos="fade-right" data-aos-delay="100">Computer Science Student</p>
+    <p class="hero-eyebrow" data-aos="fade-right" data-aos-delay="100">Dev</p>
     <h1 class="hero-title" data-aos="fade-up" data-aos-delay="200">
-      <span class="grad">PRIMUS</span><br>
+      <span class="grad">DEPRIMUS</span><br>
       <span class="outline">PORTFOLIO</span>
     </h1>
     <div class="hero-typed-wrap" data-aos="fade-up" data-aos-delay="350">
       <span id="typed-el"></span>
     </div>
     <p class="hero-desc" data-aos="fade-up" data-aos-delay="450">
-      Building web experiences, writing clean code, and solving real-world problems with Java, Python, HTML/CSS/JS — and beyond.
+      Building web experiences, writing clean code, and solving real-world problems with Java, Python, HTML/CSS/JS and beyond.
     </p>
     <div class="hero-btns" data-aos="fade-up" data-aos-delay="550">
       <a href="#projects" class="btn-glow">View Projects</a>
@@ -670,11 +691,10 @@ body.light .mobile-nav-drawer { background: rgba(248,250,252,0.97); }
   </div>
 </section>
 
-
 <!-- ═══ ABOUT ═══ -->
 <section id="about">
   <div data-aos="fade-up">
-    <div class="section-tag">01 · About</div>
+    <div class="section-tag">About</div>
     <h2 class="section-title">Who I <span>Am</span></h2>
   </div>
   <div class="about-grid">
@@ -689,7 +709,7 @@ body.light .mobile-nav-drawer { background: rgba(248,250,252,0.97); }
         <div class="stat-label">CS Courses</div>
       </div>
       <div class="stat-card">
-        <div class="stat-num">10+</div>
+        <div class="stat-num">5+</div>
         <div class="stat-label">Projects Built</div>
       </div>
       <div class="stat-card">
@@ -707,7 +727,7 @@ body.light .mobile-nav-drawer { background: rgba(248,250,252,0.97); }
 <!-- ═══ SKILLS ═══ -->
 <section id="skills">
   <div data-aos="fade-up">
-    <div class="section-tag">02 · Skills</div>
+    <div class="section-tag">Skills</div>
     <h2 class="section-title">Tech <span>Stack</span></h2>
   </div>
   <div class="skills-grid">
@@ -754,7 +774,7 @@ body.light .mobile-nav-drawer { background: rgba(248,250,252,0.97); }
 <!-- ═══ PROJECTS ═══ -->
 <section id="projects">
   <div data-aos="fade-up">
-    <div class="section-tag">03 · Projects</div>
+    <div class="section-tag">Projects</div>
     <h2 class="section-title">My <span>Work</span></h2>
   </div>
   <div class="swiper projects-swiper" data-aos="fade-up" data-aos-delay="100">
@@ -762,7 +782,7 @@ body.light .mobile-nav-drawer { background: rgba(248,250,252,0.97); }
 
       <div class="swiper-slide">
         <div class="project-card">
-          <div class="project-num">// PROJECT_01</div>
+          <div class="project-num">PROJECT_01</div>
           <div class="project-title">New Generation Computer</div>
           <div class="project-desc">A full e-commerce website for selling laptops and computer accessories. Features product listings, shopping cart, and a clean user-friendly interface built from the ground up.</div>
           <div class="project-tech">
@@ -776,7 +796,7 @@ body.light .mobile-nav-drawer { background: rgba(248,250,252,0.97); }
 
       <div class="swiper-slide">
         <div class="project-card">
-          <div class="project-num">// PROJECT_02</div>
+          <div class="project-num">PROJECT_02</div>
           <div class="project-title">Java Algorithm Suite</div>
           <div class="project-desc">A collection of Java programs covering core CS concepts: prime numbers, factorials, Fibonacci series, sorting algorithms, grade calculators, and even/odd checkers.</div>
           <div class="project-tech">
@@ -789,7 +809,7 @@ body.light .mobile-nav-drawer { background: rgba(248,250,252,0.97); }
 
       <div class="swiper-slide">
         <div class="project-card">
-          <div class="project-num">// PROJECT_03</div>
+          <div class="project-num">PROJECT_03</div>
           <div class="project-title">SIWES Technical Report</div>
           <div class="project-desc">Comprehensive technical report covering industrial training in web development, networking, IP addressing, and Python scripting. Documents real-world application of CS knowledge.</div>
           <div class="project-tech">
@@ -802,7 +822,7 @@ body.light .mobile-nav-drawer { background: rgba(248,250,252,0.97); }
 
       <div class="swiper-slide">
         <div class="project-card">
-          <div class="project-num">// PROJECT_04</div>
+          <div class="project-num">PROJECT_04</div>
           <div class="project-title">CSC 212 Assignment</div>
           <div class="project-desc">Advanced data structures and algorithms assignment covering complex problem-solving, computational thinking, and implementation of core CS fundamentals.</div>
           <div class="project-tech">
@@ -815,7 +835,7 @@ body.light .mobile-nav-drawer { background: rgba(248,250,252,0.97); }
 
       <div class="swiper-slide">
         <div class="project-card">
-          <div class="project-num">// PROJECT_05</div>
+          <div class="project-num">PROJECT_05</div>
           <div class="project-title">Personal Portfolio</div>
           <div class="project-desc">This very portfolio — designed and developed with HTML, CSS, and JavaScript. Features Particles.js, AOS animations, Swiper carousel, Typed.js, and dark/light mode toggle.</div>
           <div class="project-tech">
@@ -834,7 +854,6 @@ body.light .mobile-nav-drawer { background: rgba(248,250,252,0.97); }
   </div>
 </section>
 
-
 <!-- ═══ CONTACT ═══ -->
 <section id="contact">
   <div data-aos="fade-up">
@@ -846,10 +865,10 @@ body.light .mobile-nav-drawer { background: rgba(248,250,252,0.97); }
       <p class="contact-info-text">I'm open to collaborations, internships, and exciting projects. Feel free to reach out through any of the channels below.</p>
       <div class="contact-links">
         <a href="mailto:primus@email.com" class="contact-link">
-          <i class="fas fa-envelope"></i> primus@email.com
+          <i class="fas fa-envelope"></i> deprimus01@gmail.com
         </a>
         <a href="https://github.com" target="_blank" class="contact-link">
-          <i class="fab fa-github"></i> github.com/primus
+          <i class="fab fa-github"></i> github.com/deprimus01
         </a>
         <a href="https://linkedin.com" target="_blank" class="contact-link">
           <i class="fab fa-linkedin"></i> linkedin.com/in/primus
@@ -887,15 +906,14 @@ body.light .mobile-nav-drawer { background: rgba(248,250,252,0.97); }
 
 <!-- FOOTER -->
 <footer>
-  <p>© 2026 <span>Primus</span>. All rights reserved.</p>
+  <p>© 2026 <span>Derimus</span>. All rights reserved.</p>
   <div class="footer-social">
     <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
     <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
-    <a href="mailto:primus@email.com"><i class="fas fa-envelope"></i></a>
+    <a href="mailto:deprimus01@gmail.com"><i class="fas fa-envelope"></i></a>
   </div>
   <p>Built with <span>♥</span> · HTML · CSS · JS</p>
 </footer>
-
 
 <!-- ══════════════ SCRIPTS ══════════════ -->
 <!-- Particles.js -->
@@ -956,7 +974,6 @@ new Swiper('.projects-swiper', {
     1200: { slidesPerView: 3 }
   }
 });
-
 
 // ── CUSTOM CURSOR ──
 const cursor     = document.getElementById('cursor');
@@ -1025,7 +1042,6 @@ hamburgerBtn.addEventListener('click', () => {
   mobileDrawer.classList.toggle('open');
 });
 
-
 // Close drawer when any link is clicked
 document.querySelectorAll('#mobileDrawer a').forEach(link => {
   link.addEventListener('click', () => {
@@ -1064,4 +1080,4 @@ document.getElementById('formSubmitBtn').addEventListener('click', () => {
 </script>
 
 </body>
-</html>
+</html
