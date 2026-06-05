@@ -71,6 +71,12 @@
       background: linear-gradient(135deg, var(--accent), var(--accent2));
       -webkit-background-clip: text; -webkit-text-fill-color: transparent;
     }
+    ul{
+      list-style: none;
+    }
+    a{
+      text-decoration: none;
+    }
     .nav-links { display: flex; gap: 2.5rem; list-style: none; }
     .nav-links a {
       color: var(--muted); text-decoration: none;
